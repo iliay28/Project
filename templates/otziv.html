@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All files</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .header {
+      background: #4d4d4d;
+      color: #fff;
+      padding: 10px 0;
+  }
+  
+  .header__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+  }
+  
+  .search {
+      background: #f4f4f4;
+      padding: 20px 0;
+  }
+  
+  .search__input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+  }
+  
+  .restor {
+      padding: 20px 0;
+  }
+  
+  .restor p {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  
+  .restor__price {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .restor__price__elem {
+      background: #dbd9d9;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      width: calc((100% / 3) - 20px);
+      transition: 900ms;
+  }
+  
+  .restor__price__elem img {
+      width: 315px;
+      height: 200px;
+      margin-bottom: 10px;
+  }
+  
+  .restor__price__elem:hover {
+    background: #6e6e6e;
+    transition: 900ms;
+  }
+  
+  .restor__price__elem p {
+      margin: 5px 0;
+  }
+  
+  img.basket {
+      width: 30px;
+      height: 30px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  
+  .footer{
+    background-color: #333;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 40px 0;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 10px; Отступ снизу */
+  }
+  
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: green;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+  .ots {
+      margin-left: 10px;
+      padding-bottom: 30px;
+      width: 150px;
+  }
+  
+  .container__flex12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Замените значение на ширину вашей картинки */
+    height: 120px; /* Замените значение на высоту вашей картинки */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover .image {
+    transform: scale(1.2); /* Замените значение, чтобы увеличить или уменьшить размер картинки при наведении */
+  }
+  
+  .footer-col-spas{
+    display: flex;
+    justify-content: flex-start;  
+  }
+  
+  .footer-col-spas li {
+    display: inline;
+    margin-right: 10px;
+    width: 500px;
+    margin-left: 440px;  
+  }
+  
+  .footer-col-spas a{
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-col-spas ul li a:hover{
+    color: #ffffff;
+  }
+  
+  .idial {
+    background: #4d4d4d;
+    padding: 20px 0;
+  }
+  
+  .idial ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .idial ul li {
+    display: inline;
+  }
+  
+  .idial ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .idial ul li a:hover {
+      background-color: #555;
+  }
+
+  .card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.zag {
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.zag:hover {
+  color: #007bff;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+    <div class="header__flex">
+    
+      <a href="/"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-"></a>
+      <nav class="idial">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/FAQ">FAQ</a></li>
+          <li><a href="/sogl">Соглашение</a></li>
+          <li><a href="/otziv">Отзывы</a></li>
+        </ul>
+      </nav>
+    <nav>
+        <a href="/register">Войти</a>
+        <img src="{{ url_for('static', filename='images/basket.svg') }}" alt="-_-">
+    </nav>
+    </div>
+</div>
+</header>
+{% for file_name, file_content in list_files %}
+<div class="card">
+  <h3 class="review-title">{{ file_name }}</h3>
+  <p class="review-text">{% for line in file_content %}{{ line }}{% endfor %}</p>
+</div>
+{% endfor %}
+<hr>
+<a href="/create">Добавьте отзыв!</a>
+</body>
+</html>

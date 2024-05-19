@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All files</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .header {
+      background: #4d4d4d;
+      color: #fff;
+      padding: 10px 0;
+  }
+  
+  .header__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+  }
+  
+  .search {
+      background: #f4f4f4;
+      padding: 20px 0;
+  }
+  
+  .search__input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+  }
+  
+  .restor {
+      padding: 20px 0;
+  }
+  
+  .restor p {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  
+  .restor__price {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .restor__price__elem {
+      background: #dbd9d9;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      width: calc((100% / 3) - 20px);
+      transition: 900ms;
+  }
+  
+  .restor__price__elem img {
+      width: 315px;
+      height: 200px;
+      margin-bottom: 10px;
+  }
+  
+  .restor__price__elem:hover {
+    background: #6e6e6e;
+    transition: 900ms;
+  }
+  
+  .restor__price__elem p {
+      margin: 5px 0;
+  }
+  
+  img.basket {
+      width: 30px;
+      height: 30px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  
+  .footer{
+    background-color: #333;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 40px 0;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 10px; Отступ снизу */
+  }
+  
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: green;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+  .ots {
+      margin-left: 10px;
+      padding-bottom: 30px;
+      width: 150px;
+  }
+  
+  .container__flex12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Замените значение на ширину вашей картинки */
+    height: 120px; /* Замените значение на высоту вашей картинки */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover .image {
+    transform: scale(1.2); /* Замените значение, чтобы увеличить или уменьшить размер картинки при наведении */
+  }
+  
+  .footer-col-spas{
+    display: flex;
+    justify-content: flex-start;  
+  }
+  
+  .footer-col-spas li {
+    display: inline;
+    margin-right: 10px;
+    width: 500px;
+    margin-left: 440px;  
+  }
+  
+  .footer-col-spas a{
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-col-spas ul li a:hover{
+    color: #ffffff;
+  }
+  
+  .idial {
+    background: #4d4d4d;
+    padding: 20px 0;
+  }
+  
+  .idial ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .idial ul li {
+    display: inline;
+  }
+  
+  .idial ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .idial ul li a:hover {
+      background-color: #555;
+  }
+  
+.bort {
+    border: 1px solid slategray;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.menu {
+    display: block;
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+  }
+  
+  .menu li {
+    margin-right: 0px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    padding: 15px 10px;
+    color: white;
+  }
+  
+  .menu li a.active {
+    background-color: white;
+    color: orange;
+  }
+
+.spisoc {
+    font-size: 20px;
+    margin-left: 15px;
+    word-spacing: 10px;
+}
+  
+.tab-content {
+    display: none;
+    padding: 10px;
+}
+  
+:target {
+    display: block;
+}
+
+
+
+.ots2 {
+  text-align: center;
+  font-size: 15px;
+  color: rgb(184, 122, 8);
+  word-spacing: 20px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu a:hover {
+    color: #ff5733;
+  }
+  </style>
+  <script>
+    function changeColor(tab) {
+var tabs = document.querySelectorAll('.menu li a');
+tabs.forEach(function(tab) {
+tab.classList.remove('active');
+});
+tab.classList.add('active');
+}
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+    <div class="header__flex">
+    
+      <a href="/"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-"></a>
+      <nav class="idial">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/FAQ">FAQ</a></li>
+          <li><a href="/sogl">Соглашение</a></li>
+          <li><a href="/otziv">Отзывы</a></li>
+        </ul>
+      </nav>
+    <nav>
+        <a href="/register">Войти</a>
+        <img src="{{ url_for('static', filename='images/basket.svg') }}" alt="-_-">
+    </nav>
+    </div>
+</div>
+</header>
+<div class="bort">
+    <div class="menu">
+      <a href="#Главная" onclick="changeColor(this)">Почему вам стоит покупать аккаунты именно у нас?</a>
+      <br>
+        <div id="Главная" class="tab-content">
+          <p>1. Мы предлагаем самые лучшие цены на все товары.</p>
+          <p>2. Гарантия получения товара. Мы гарантируем вам, что после покупки, вы получите аккаунт 
+            соответствующий описанию.</p>
+          <p>3. Техническая поддержка на сайте работает круглосуточно и без выходных.</p>
+          <p>4. Огромный ассортимент аккаунтов, который в дальнейшем будет еще пополняться.</p>
+          <p>5. Моментальная выдача аккаунта и примогемов.</p>
+          <p>6. Гарантия безопасности при покупки.</p>
+        </div>   
+    </div>
+</div>
+    <div class="bort">
+      <div class="menu">
+        <a href="#Новости" onclick="changeColor(this)">Как купить аккаунт Genshin Impact?</a>
+        <div id="Новости" class="tab-content">
+          <p>1. Выбираете любой товар, который вам понравился. Благо ассортимент мы предлагаем большой.</p>
+          <p>3. После того, как Вы выберите товар, заходите на его карточку. Далее необходимо выбрать способ 
+            оплаты, указать контактные данные.</p>
+          <p>4. Следующим шагом будет ввод имени и промокода (если есть), подтверждение способа оплаты. 
+            После успешной оплаты автоматически откроется окно, где вы увидите данные от купленного аккаунта 
+            в формате Логин:Пароль. Так же они будут продублированы на почту, которую вы указывали.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bort">
+      <div class="menu">
+        <a href="#Контакты" onclick="changeColor(this)">Безопасно ли покупать аккаунты?</a>
+        <div id="Контакты" class="tab-content">
+          <p>Да, мы лично регистрируем аккаунты и прокачиваем их, поэтому бан вы ни при каких случаях не 
+            получите. Аккаунты не краденные и не взломанные.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bort">
+      <div class="menu">
+        <a href="#О компании" onclick="changeColor(this)">Куда приходят данные от аккаунта после покупки?</a>
+        <div id="О компании" class="tab-content">
+          <p>После оплаты данные от аккаунта будут показаны на сайте, отправлены на ваш email, а также всегда 
+            доступны в разделе «Мои покупки».</p>
+        </div>
+      </div>
+    </div>
+    <div class="bort">
+      <div class="menu">
+        <a href="#Как добраться" onclick="changeColor(this)">Попросили код подтверждения, где его взять?</a>
+        <div id="Как добраться" class="tab-content">
+          <p>Данные от почты такие же как и от аккаунта. Вводите на сайте mail.rambler.ru</p>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
