@@ -60,7 +60,7 @@ button:hover {
 </head>
 <body>
 
-<form action="/action_page.php">
+<form action="/">
   <div class="container">
     <h1>Регистрация</h1>
     <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
@@ -76,7 +76,9 @@ button:hover {
     <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
     <hr>
     <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#">Условия и конфиденциальность</a>.</p>
-
+        {% if msg %}
+            <p>{{ msg }}</p>
+        {% endif %}
     <button type="submit">Регистрация</button>
   </div>
   
@@ -84,6 +86,9 @@ button:hover {
     <p>У вас уже есть аккаунт? <a href="#">Войти</a>.</p>
   </div>
 </form>
+
+</body>
+</html>
 
 </body>
 </html>

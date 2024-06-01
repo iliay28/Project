@@ -241,7 +241,7 @@ ul{
   display: inline;
   margin-right: 10px;
   width: 500px;
-  margin-left: 300px;  
+  margin-left: 440px;  
 }
 
 .footer-col-spas a{
@@ -283,16 +283,70 @@ ul{
 .idial ul li a:hover {
     background-color: #555;
 }
-a {
-  text-decoration: none;
-  color: black;
-  transition: background-color 0.5s ease;
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
 
-a:hover {
-  background-color: #555;
-  color: white;
-  transition: background-color 0.5s ease;
+.product-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.product-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.product-price {
+    flex: 1;
+    padding: 0 20px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+hr {
+    border: 1px solid #999;
+    margin: 10px 0;
+}
+
+p {
+    color: #666;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #666;
+}
+
+.cena {
+  font-size: 40px;
+  color: #4d4d4d;
+  font-family: KaedenBold;
 }
 </style>
 </head>
@@ -302,7 +356,7 @@ a:hover {
                 <div class="container">
             <div class="header__flex">
             
-              <a href="/"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-"></a>
+                <a href="/"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-"></a>
               <nav class="idial">
                 <ul>
                   <li><a href="/">Главная</a></li>
@@ -318,104 +372,27 @@ a:hover {
             </div>
         </div>
     </header>
-    <div class="search">
-        <div class="container">
-            <input type="text" class="search__input" placeholder="Поиск по ресторанам и кухням">
-        </div>
-    </div>
-    <div class="restor">
-        <div class="container">
-            <p>Рестораны в Москве</p>
-            <div class="restor__price">
-              <a class="tovar" href="/tovar">
-                <div class="restor__price__elem">
-                  <img src="{{ url_for('static', filename='images/price/1.png') }}" alt="-_-">
-                  <p>Макдоналдс - Газетный</p>
-                  <p>&#8381;&#8381; &#183; Бургеры</p>
-                  <p>25 - 35 мин</p>
-                  </a>
-                </div>
-                <a class="tovar" href="/tovar1">
-                <div class="restor__price__elem">
-                    <img src="{{ url_for('static', filename='images/price/2.png') }}" alt="-_-">
-                    <p>DimSum & Co — ЦДМ</p>
-                    <p>₽ • Японская • Китайская • Азиатская</p>
-                    <p>40 - 50 мин</p>
-                    </a>
-					      </div>
-                <a class="tovar" href="/tovar2">
-					      <div class="restor__price__elem">
-                    <img src="{{ url_for('static', filename='images/price/3.png') }}" alt="-_-">
-                    <p>ДвижОК — Манежная</p>
-                    <p>₽ • Американская • Европейская</p>
-                    <p>35 - 45 мин</p>
-                    </a>
-                </div>
-             </div>
-		</div>
-	</div>
-    
-    <div class="restor">
-        <div class="container">
-            <div class="restor__price">
-              <a class="tovar" href="/tovar3">
-                <div class="restor__price__elem">
-                  <img src="{{ url_for('static', filename='images/price/4.png') }}" alt="-_-">
-                  <p>Макдоналдс - Газетный</p>
-                  <p>&#8381;&#8381; &#183; Бургеры</p>
-                  <p>25 - 35 мин</p>
-                  </a>
-                </div>
-                <a class="tovar" href="/tovar4">
-                <div class="restor__price__elem">
-                  <img src="{{ url_for('static', filename='images/price/5.png') }}" alt="-_-">
-                    <p>DimSum & Co — ЦДМ</p>
-                    <p>₽ • Японская • Китайская • Азиатская</p>
-                    <p>40 - 50 мин</p>
-                    </a>
-					      </div>
-                <a class="tovar" href="/tovar5">
-					      <div class="restor__price__elem">
-                  <img src="{{ url_for('static', filename='images/price/6.png') }}" alt="-_-">
-                    <p>ДвижОК — Манежная</p>
-                    <p>₽ • Американская • Европейская</p>
-                    <p>35 - 45 мин</p>
-                    </a>
-                </div>
-            </div>
-		</div>
-	</div>
 
-    <div class="restor">
-        <div class="container">
-            <div class="restor__price">
-              <a class="tovar" href="/tovar6">
-                <div class="restor__price__elem">
-                  <img src="{{ url_for('static', filename='images/price/7.png') }}" alt="-_-">
-                  <p>Макдоналдс - Газетный</p>
-                  <p>&#8381;&#8381; &#183; Бургеры</p>
-                  <p>25 - 35 мин</p>
-                  </a>
-                </div>
-                <a class="tovar" href="/tovar7">
-                <div class="restor__price__elem">
-                  <img src="{{ url_for('static', filename='images/price/8.png') }}" alt="-_-">
-                    <p>DimSum & Co — ЦДМ</p>
-                    <p>₽ • Японская • Китайская • Азиатская</p>
-                    <p>40 - 50 мин</p>
-                    </a>
-					      </div>
-                <a class="tovar" href="/tovar8">
-					      <div class="restor__price__elem">
-                    <img src="{{ url_for('static', filename='images/price/9.png') }}" alt="-_-">
-                    <p>ДвижОК — Манежная</p>
-                    <p>₽ • Американская • Европейская</p>
-                    <p>35 - 45 мин</p>
-                    </a>
-                </div>
-             </div>
-		</div>
-	</div>
+    <div class="container1">
+      <div class="product-image">
+        <img src="{{ url_for('static', filename='images/price/2.png') }}" alt="-_-">
+      </div>
+      <div class="product-info">
+          <h2>Комбо</h2>
+          <hr>
+          <p>О товаре</p>
+          <p>В этот комбо входит бургер, 2 большие картошки free, колла, нагетсы и перожок.</p>
+          <p>Готовится 25 - 35 мин.</p>
+      </div>
+      <div class="product-price">
+          <h3 class="cena">500,00₽</h3>
+          <hr>
+          <p>Введите свою почту:</p>
+          <input type="email" placeholder="E-mail">
+          <hr>
+          <button class="btn">Оплатить</button>
+      </div>
+  </div>    
 
     <footer class="footer">
         <img class="ots" src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-">
@@ -424,31 +401,31 @@ a:hover {
         <div class="container">
          <div class="row">
            <div class="footer-col">
-             <h4>Компания</h4>
+             <h4>company</h4>
              <ul>
-               <li><a href="#">о нас</a></li>
-               <li><a href="#">наши услуги</a></li>
-               <li><a href="#">политика конфиденциальности</a></li>
-               <li><a href="#">партнерская программа</a></li>
+               <li><a href="#">about us</a></li>
+               <li><a href="#">our services</a></li>
+               <li><a href="#">privacy policy</a></li>
+               <li><a href="#">affiliate program</a></li>
              </ul>
            </div>
            <div class="footer-col">
-             <h4>Обратиться за помощью</h4>
+             <h4>get help</h4>
              <ul>
                <li><a href="/FAQ">FAQ</a></li>
-               <li><a href="#">доставка</a></li>
-               <li><a href="#">возвращается</a></li>
-               <li><a href="#">статус заказа</a></li>
-               <li><a href="#">способы оплаты</a></li>
+               <li><a href="#">shipping</a></li>
+               <li><a href="#">returns</a></li>
+               <li><a href="#">order status</a></li>
+               <li><a href="#">payment options</a></li>
              </ul>
            </div>
            <div class="footer-col">
-             <h4>Интернет-магазин</h4>
+             <h4>online shop</h4>
              <ul>
-               <li><a href="#">часы</a></li>
-               <li><a href="#">сумка</a></li>
-               <li><a href="#">туфли</a></li>
-               <li><a href="#">платье</a></li>
+               <li><a href="#">watch</a></li>
+               <li><a href="#">bag</a></li>
+               <li><a href="#">shoes</a></li>
+               <li><a href="#">dress</a></li>
              </ul>
            </div>           
           </div>
@@ -468,9 +445,9 @@ a:hover {
         <br>
         <div class="footer-col-spas">
             <ul>
-              <li><a href="#">часы</a></li>
-              <li><a href="#">сумка</a></li>
-              <li><a href="#">туфли</a></li>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
             </ul>
           </div> 
         </div>
